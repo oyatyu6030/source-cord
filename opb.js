@@ -1,6 +1,6 @@
 // 変数定義
 const eris = require('eris')
-const bot = new eris('NDU3MTk0NDIwODYxNzk2MzUz.DgX0kw.XHp8KrQO7-HMQhotNmEjtIB7X7Q') //token
+const bot = new eris('token') //token
 
 // Botの準備が出来たらconsoleにオンライン化に成功と表示（変更可）
 bot.on('ready', () => {
