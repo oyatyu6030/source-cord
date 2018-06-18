@@ -35,54 +35,6 @@ bot.on('messageCreate', (msg) => {
 
 //メッセージを作る系のソースはこの上に書いていく
 
-bot.on('messageCreate', (msg) => {
-    if(msg.content === '.os:p1') {
-        bot.createMessage(msg.channel.id, '===O.S.役職一覧表===   page[1/1] ========' + '\n' + '**鯖主【OWNER】**' + '\n' + '本鯖の設立者の権限です。全権限を使用することができます。' + '\n' + '=================================' + '\n' + '')
-    }
-})
-
-bot.on('guildMemberAdd', (guild, member, msg, author) => {
-    bot.createMessage('428884489738125324', {
-        embed: {
-            author: {
-                name: member.user.username + 'さんoyatyu-serverへようこそ！',
-                url: 'https://discord.gg/pWkJeHs',
-            },
-            title: 'ここをクリックで参加希望部のアンケートに飛びます。', 
-            color: 0x4286f4,
-            url: 'https://goo.gl/forms/6lFkWrpNr43iEzBC2',
-            description: '\n' + '本鯖の説明等は全てBOTのコマンドで行っています。' + '\n' + '<#445121154915500032>にて .os:h1 と書き込んでコマンドの確認をしてください。',
-            timestamp: new Date(),
-        }
-    })
-})
-
-bot.on('guildMemberRemove', (guild, member) => {
-    bot.createMessage('428884489738125324', '<@' + member.user.id + '>さんまた来てね！')
-})
-
-bot.on('messageCreate', (msg) => {
-    if(msg.author.bot === false) {
-        if(msg.content.match(/今の時間は/)) {
-            var n = 7
-            if(msg.content.length <= 7) {
-                var date = new Date()
-                var year = date.getFullYear()
-                var month = date.getMonth() + 1
-                var dates = date.getDate()
-                var day = date.getDay()
-                var days = ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日']
-                var hours = date.getHours()
-                var minutes = date.getMinutes()
-                var seconds = date.getSeconds()
-
-                bot.createMessage(msg.channel.id, '今日は' + year + '年' + month + '月' + dates + '日 ' + days[day] + '\n' + '時刻は' + hours + '時' + minutes + '分' + seconds + '秒です。')
-            }
-        }
-    }
-})
-
-
 //---------ここから上にソースコードを書くこと------------
 
 // Discordに接続
