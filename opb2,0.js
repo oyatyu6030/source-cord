@@ -219,7 +219,7 @@ bot.on('messageCreate', (msg) => {
 
     //今の時間は？コマンドのソースはここまで
 
-    if(msg.author.bot === false) {
+    if(msg.author.bot === false) {   //グーグル翻訳の翻訳結果へのリンク表示
         if(msg.content.match(/.os:tr /)) {
             var tr = msg.content.replace('.os:tr ', '')
             if(tr.match(/日本語:英語 /)) {
@@ -257,7 +257,7 @@ bot.on('messageCreate', (msg) => {
         }
     }
 
-    if(msg.author.bot === false) {
+    if(msg.author.bot === false) {      //Googleでの検索結果の表示
         if(msg.content.match(/.os:g /)) {
             var go = msg.content.replace('.os:g ', '')
             bot.createMessage(msg.channel.id, {
@@ -275,7 +275,7 @@ bot.on('messageCreate', (msg) => {
         }
     }
 
-    if(msg.author.bot === false) {
+    if(msg.author.bot === false) {   //YouTubeでの検索結果の表示
         if(msg.content.match(/.os:y /)) {
             var yo = msg.content.replace('.os:y ', '')
             bot.createMessage(msg.channel.id, {
@@ -293,7 +293,7 @@ bot.on('messageCreate', (msg) => {
         }
     }
 
-    if(msg.author.bot === false) {
+    if(msg.author.bot === false) {   //計算結果の表示(計算機工)
         if(msg.content.match(/.os:m /)) {
             if(msg.content.match(/;/)) {
                 var num1 = msg.content.replace('.os:m ', '')
