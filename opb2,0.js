@@ -1,6 +1,6 @@
 // 変数定義
 const eris = require('eris')
-const bot = new eris('NDU3MTk0NDIwODYxNzk2MzUz.Dh3B-Q.YBHr0jRK2uXGA9Tw5k52LdUS2rU') //token
+const bot = new eris('token') //token
 const fs = require('fs')
 const dir = 'C:/Users/味噌ラーメン/Desktop/Discord-Bots/opb/userdata'
 
