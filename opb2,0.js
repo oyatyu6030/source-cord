@@ -1,8 +1,6 @@
 // 変数定義
 const eris = require('eris')
 const bot = new eris('token') //token
-const fs = require('fs')
-const dir = 'C:/Users/味噌ラーメン/Desktop/Discord-Bots/opb/userdata'
 
 // Botの準備が出来たらconsoleにオンライン化に成功と表示（変更可）
 bot.on('ready', () => {
